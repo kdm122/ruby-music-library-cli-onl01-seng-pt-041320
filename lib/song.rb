@@ -75,6 +75,7 @@ class Song
 #      end
 #    end
 
+<<<<<<< HEAD
 #    def self.find_by_name(name)
 #      self.all.detect { |song| song.name == name }
 #    end
@@ -103,6 +104,19 @@ class Song
 
     def self.create_from_filename(file)
       self.new_from_filename(file)
+=======
+    def self.find_by_name(name)
+      self.all.detect { |song| song.name == name }
+    end
+
+    def self.find_or_create_by_name(name)
+
+      if self.find_by_name(name)
+        self.find_by_name(name)
+      else
+        self.create(name)
+      end
+>>>>>>> fa1c663324921c94d87fcf730998ad3cfbe11bba
     end
 
 
